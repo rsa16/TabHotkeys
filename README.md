@@ -1,7 +1,5 @@
 # Tab Hotkeys
-My version of a successor to "Close Tab Shortcuts", which in my opinion did not have enough hotkeys for my liking. Also, uses highlighted tabs instead of current, which works better for my cases. 
-<br/>
-Of course, use either. Shortcuts can be customised through Manage Extension Shortcuts.
+My version of a successor to "Close Tab Shortcuts", which in my opinion did not have enough hotkeys for my liking. Also, uses highlighted tabs instead of current, which works better for my cases. Of course, use either. Shortcuts can be customised through Manage Extension Shortcuts.
 
 ### Default Shortcuts
 * Close Other `Alt+W` - closes other tabs except **highlighted/selected**
