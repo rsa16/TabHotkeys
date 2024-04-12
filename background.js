@@ -47,7 +47,7 @@ async function moveTabs(commandIndex) {
 }
 
 async function handleHotKeys(commandId) {
-    console.log(commandId);
+    // console.log(commandId);
 
     if (closeCommandGroup.includes(commandId)) { 
         await closeTabs(commandId.split("-")[1]); 
