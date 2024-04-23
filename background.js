@@ -54,5 +54,11 @@ async function handleHotKeys(commandId) {
             var tabs = await browser.tabs.query({currentWindow: true});
             await browser.tabs.highlight({tabs: tabs.map(tab => tab.index)});
             break;
+
+        case "duplicate-tabs":
+            var tabs = await browser.tabs.query({ highlighted: true, currentWindow: true });
+            var tabIDs = tabs.map(tab => tab.id);
+            tabIDs.forEach(id => browser.tabs.duplicate(id));
+            break;
     }
 }
