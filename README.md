@@ -7,4 +7,5 @@ My version of a successor to "Close Tab Shortcuts", which in my opinion did not 
 * Close Right `Alt+Shift+F2` - closes all tabs except rightmost **highlighted**
 * Move To Start `Alt+Shift+Q` - move highlighted tabs to the start of the window
 * Move To End `Alt+Shift+W` - move highlighted tabs to end of the window
+* Duplicate Tab(s) `Ctrl+Alt+D` - duplicate highlighted tabs
 * Select All Tabs `Ctrl+Alt+A` - self explanatory... i hope
