@@ -1,16 +1,5 @@
 browser.commands.onCommand.addListener(command => handleHotKeys(command));
 
-let closeCommandGroup = [
-    'close-other-tabs', 
-    'close-left-tabs', 
-    'close-right-tabs'
-]
-
-let moveCommandGroup = [
-    'move-to-start',
-    'move-to-end'
-]
-
 async function closeTabs(commandIndex) {
     var tabs = await browser.tabs.query({currentWindow: true});
     var activeTabs = await tabs.filter(tab => tab.highlighted);
@@ -49,12 +38,21 @@ async function moveTabs(commandIndex) {
 async function handleHotKeys(commandId) {
     // console.log(commandId);
 
-    if (closeCommandGroup.includes(commandId)) { 
-        await closeTabs(commandId.split("-")[1]); 
-    } else if (moveCommandGroup.includes(commandId)) { 
-        await moveTabs(commandId.split("-")[2]); 
-    } else {
-        var tabs = await browser.tabs.query({currentWindow: true});
-        await browser.tabs.highlight({tabs: tabs.map(tab => tab.index)});
+    switch (commandId) {
+        case "close-other-tabs":
+        case "close-left-tabs":
+        case "close-right-tabs":
+            await closeTabs(commandId.split("-")[1]);
+            break;
+
+        case "move-to-start":
+        case "move-to-end":
+            await moveTabs(commandId.split("-")[2]);
+            break;
+
+        case "select-all-tabs":
+            var tabs = await browser.tabs.query({currentWindow: true});
+            await browser.tabs.highlight({tabs: tabs.map(tab => tab.index)});
+            break;
     }
 }
