@@ -10,7 +10,7 @@
     ],
 
     "background": {
-        "scripts": ["background.js"],
+        "scripts": ["browser-polyfill.min.js", "background.js"],
         "persistent": false,
         "type": "module"
     },
@@ -35,6 +35,10 @@
         "move-to-end": {
             "suggested_key": { "default": "Alt+Shift+W" },
             "description": "Move To End"
+        },
+        "duplicate-tabs": {
+            "suggested_key": { "default": "Ctrl+Alt+D" },
+            "description": "Duplicate Tab(s)"
         },
         "select-all-tabs": {
             "suggested_key": { "default": "Ctrl+Alt+A" },
